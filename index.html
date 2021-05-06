@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neumorphism Battery Indicator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="whole">
+    <p class="charge" id="charge"></p>
+    <div class="battery">
+      <div class="visual" id="visual"></div>
+    </div>
+  </div>
+  <script>
+  var interval = setInterval(function(){
+    var charge = document.getElementById("charge");
+    navigator.getBattery().then(function(battery){
+      var battery = Math.trunc(battery.level * 100);
+      document.getElementById('charge').innerHTML = battery + "%";
+      var visual = document.getElementById('visual');
+      visual.style.width = battery/100 * 170 + "px";
+    });
+  },1000); 
+  </script>
+</body>
+</html>

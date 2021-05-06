@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+body{
+  background-color: #eaecee;
+}
+.whole{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 300px;
+  width: 300px;
+  background-color: #eaecee;
+  border-radius: 30px;
+  box-shadow: -2px 2px 4px black;
+}
+.charge{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Abel', sans-serif;
+}
+.battery{
+  height: 90px;
+  width: 200px;
+  background-color: transparent;
+  border-radius: 30px;
+  box-shadow: -2px 2px 4px black,
+              inset -2px 2px 6px black;
+  border: 20px solid #eaecee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-25%);
+  transition-duration: 1s;
+}
+.battery:before{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  box-shadow: 0px 2px 2px black;
+  border-radius: 4px;
+  right: -40px;
+  top: 35px;
+}
+.visual{
+  position: relative;
+  background-color: transparent;
+  height: 70px;
+  box-shadow: -2px 2px 6px black;
+  top: 10px;
+  width: 170px;
+  border-radius: 10px;
+  left: 15px;
+}
